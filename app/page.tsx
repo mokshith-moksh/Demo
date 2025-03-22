@@ -2,17 +2,19 @@
 import { AnimatedTooltipPreview } from "@/components/ui/AnimatedCard";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Tabs } from "@/components/ui/tabs";
+import { Tabs } from "@/components/ui/tabss";
+import Section1 from "@/components/section1";
+import Section2 from "@/components/section2";
 const tabData = [
   {
     title: "Programs",
     value: "Programs",
-    content: <p>Welcome to the Home tab!</p>,
+    content: <Section1 />,
   },
   {
     title: "Universities",
     value: "Universities",
-    content: <p>This is your Profile tab.</p>,
+    content: <Section2 />,
   },
 ];
 
@@ -20,8 +22,8 @@ export default function Home() {
   return (
     <div className="flex flex-col md:flex-row justify-start items-start w-full min-h-screen gap-6 p-4">
       {/* Left Side - Visible on all devices */}
-      <div className="w-full md:w-[50%] flex flex-col h-full justify-end mt-6 md:mt-0 ">
-        <Tabs tabs={tabData} activeTabClassName="bg-blue-600 text-white" />
+      <div className="w-full md:w-[50%] flex flex-col h-full justify-end mt-6 md:mt-0 p-8">
+        <Tabs tabs={tabData} activeTabClassName="bg-[#5467FF] text-white" />
       </div>
       {/* Images - Hidden on mobile, visible on tablets and larger devices */}
       {/* Right Side - Hidden on mobile, visible on tablets and larger devices */}
