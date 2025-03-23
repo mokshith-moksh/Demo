@@ -6,34 +6,24 @@ export const themes = [
 
 export const sidebarLinks = [
   {
-    imgURL: "/assets/icons/home.svg",
+    imgURL: "/assets/icons8-home-50.png",
     route: "/",
-    label: "Home",
+    label: "Education in Russia",
   },
   {
-    imgURL: "/assets/icons/users.svg",
+    imgURL: "/assets/icons8-community-50.png",
     route: "/community",
-    label: "Community",
+    label: "Life in Russia",
   },
   {
     imgURL: "/assets/icons/star.svg",
     route: "/collection",
-    label: "Collections",
+    label: "What to do",
   },
   {
     imgURL: "/assets/icons/suitcase.svg",
     route: "/jobs",
-    label: "Find Jobs",
-  },
-  {
-    imgURL: "/assets/icons/tag.svg",
-    route: "/tags",
-    label: "Tags",
-  },
-  {
-    imgURL: "/assets/icons/question.svg",
-    route: "/ask-questions",
-    label: "Ask a question",
+    label: "Why Russia",
   },
 ];
 

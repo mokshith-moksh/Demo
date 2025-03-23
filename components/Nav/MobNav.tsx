@@ -28,14 +28,11 @@ const NavContent = () => {
                   isActive ? "primary-gradient text-light-900 rounded-lg " : ""
                 } flex items-center justify-start gap-4 bg-transparent p-4  `}
               >
-                <Image
-                  src={item.imgURL}
-                  alt={item.label}
-                  width={20}
-                  height={20}
-                  className={`${isActive ? " " : "invert-colors"}`}
-                />
-                <p className={`${isActive ? "base-bold" : "base-medium"}`}>
+                <p
+                  className={`${
+                    isActive ? "base-bold" : "base-medium"
+                  } text-lg border-b-2 border-black`}
+                >
                   {item.label}
                 </p>
               </Link>
