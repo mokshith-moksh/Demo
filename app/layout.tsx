@@ -7,12 +7,13 @@ import { cn } from "@/lib/utils";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
-  weight: "100 900",
+  display: "swap",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
-  weight: "100 900",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -22,16 +23,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        <div className="relative flex h-[50rem] w-full items-center justify-center bg-white dark:bg-black">
+        <div className="relative flex min-h-screen w-full items-center justify-center bg-white dark:bg-black">
+          {/* Grid Background */}
           <div
             className={cn(
               "absolute inset-0",
@@ -40,14 +40,15 @@ export default function RootLayout({
               "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
             )}
           />
-          {/* Radial gradient for the container to give a faded look */}
-          <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
-          <main className="mt-24 relative">
-            <div className="flex">
-              <section className="flex min-h-screen flex-1 flex-col px-6 pb-6 pt-28 max-md:pb-14 sm:px-14 ">
-                <div className="mx-auto w-full max-w-6xl ">{children}</div>
-              </section>
-            </div>
+
+          {/* Radial Gradient for Faded Look */}
+          <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white dark:bg-black [mask-image:radial-gradient(circle,rgba(0,0,0,0.1)_10%,rgba(0,0,0,1)_80%)]"></div>
+
+          {/* Main Content */}
+          <main className="absolute">
+            <section className="">
+              <div className="">{children}</div>
+            </section>
           </main>
         </div>
       </body>

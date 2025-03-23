@@ -60,15 +60,11 @@ const MobileNavbar = () => {
         >
           <Link href="/" className="flex gap-2">
             <Image
-              src="/assets/images/site-logo.svg"
-              width={23}
-              height={23}
+              src="https://education-in-russia.com/img/bottom-logo.fd354e12.svg"
+              width={130}
+              height={130}
               alt="DevFlow"
             />
-
-            <p className="h2-bold text-dark100_light900 font-spaceGrotesk">
-              Dev <span className="text-primary-500">OverFlow</span>
-            </p>
           </Link>
           <div>
             <SheetClose asChild>

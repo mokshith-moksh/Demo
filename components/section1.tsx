@@ -16,8 +16,8 @@ export default function Section1() {
   };
 
   return (
-    <div className="w-full max-w-lg bg-white/30 backdrop-blur-lg rounded-2xl shadow-xl p-8 mx-auto border border-white/20 relative">
-      <Tabs defaultValue="account" className="w-[400px]">
+    <div className="">
+      <Tabs defaultValue="account" className="">
         <TabsList className="flex gap-2 mb-7 justify-between h-12">
           <TabsTrigger value="account">Major Programs</TabsTrigger>
           <TabsTrigger value="password">Additional Programs</TabsTrigger>
