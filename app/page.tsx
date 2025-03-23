@@ -8,9 +8,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Home() {
   return (
-    <div className="bg-transparent w-[100vw] min-h-screen flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-28 p-4">
+    <div className="bg-transparent w-[100vw] min-h-screen flex flex-col gap-12 lg:flex-row justify-center items-center lg:gap-28 p-4">
       {/* Tabs Section */}
-      <div className="w-full lg:w-auto mt-52 lg:mt-0 relative">
+      <div className="w-1/2 lg:w-auto mt-52 lg:mt-0 relative">
         <Tabs defaultValue="account" className="w-full relative">
           <TabsList className="w-auto">
             <TabsTrigger value="account" className="w-auto">
